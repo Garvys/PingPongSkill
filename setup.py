@@ -12,5 +12,8 @@ setup(
     keywords=['snips'],
     packages=['ping_pong_skill'],
     package_data={'myskill': ['Snipsspec']},
+    install_requires=[
+        'peewee',
+    ],
     include_package_data=True,
 )

@@ -1,26 +1,39 @@
 # -*-: coding utf-8 -*-
 """ Skeleton Snips skill. """
 
+from peewee import *
+
+db = SqliteDatabase('people.db')
+
+class Game(Model):
+    winner = CharField()
+    loser = CharField()
+    date = DateTimeField(default=datetime.datetime.now)
+    score = CharField()
+
+    class Meta:
+        database = db # This model uses the "people.db" database.
+
+
 class PingPongSkill:
     """ Skeleton Snips skill. """
 
     def __init__(self):
-        """
-        :param hostname: hostname for some IoT device
-        :param light_ids: A list of light IDs
-        """
 	pass
 
-    def hello_world(self):
-	print("COUCOU")
+    def register_game(self, winner, loser, score):
+        new_game = Game.create(winner, loser, score, date=
+
 
     def turn_on(self):
         """ Turn on something. """
         print("Turn on")
-        
+
+
     def turn_off(self):
         """ Turn of something. """
         print("Turn off")
+
 
     def set_color_name(self, object_color):
         """ Set an object color. """
