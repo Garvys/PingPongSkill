@@ -4,6 +4,12 @@ description: My fantastic Hack Day skill
 parameters:
 intents:
   - intent: Winner
-    action: "hello_world"
+    action: "handle_terminate_game"
   - intent: Loser
-    action: "hello_world"
+    action: "handle_terminate_game"
+  - intent: QureryScore
+    action: "handle_terminate_game"
+  - intent: TerminateGame
+    action: "handle_terminate_game"
+
+
