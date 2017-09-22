@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='ping_pong_skill',
+    name='pingpongskill',
     version='0.0.1',
     description='My skill for Snips',
     url='https://github.com/Garvys/PingPongSkill',
@@ -10,7 +10,7 @@ setup(
     install_requires=['requests==2.6.0', 'peewee'],
     test_suite="tests",
     keywords=['snips'],
-    packages=['ping_pong_skill'],
+    packages=['pingpongskill'],
     package_data={'myskill': ['Snipsspec']},
     include_package_data=True,
 )

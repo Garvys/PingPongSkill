@@ -1,4 +1,4 @@
-package_name: ping_pong_skill
+package_name: pingpongskill
 class_name: PingPongSkill
 description: My fantastic Hack Day skill
 parameters:

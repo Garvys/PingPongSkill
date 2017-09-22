@@ -20,7 +20,7 @@ class PingPongSkill:
     """ Skeleton Snips skill. """
 
     def __init__(self):
-	pass
+        pass
 
     def hello_word(self):
         print "Coucou"
