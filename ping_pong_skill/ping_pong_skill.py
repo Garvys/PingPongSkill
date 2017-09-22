@@ -1,16 +1,15 @@
 # -*-: coding utf-8 -*-
 """ Skeleton Snips skill. """
 
-class MySkill:
+class PingPongSkill:
     """ Skeleton Snips skill. """
 
-    def __init__(self, hostname, light_ids):
+    def __init__(self):
         """
         :param hostname: hostname for some IoT device
         :param light_ids: A list of light IDs
         """
-        self.hostname = hostname
-        self.light_ids = light_ids
+	pass
 
     def turn_on(self):
         """ Turn on something. """
