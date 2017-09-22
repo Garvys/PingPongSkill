@@ -102,3 +102,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+pingpongskill/ping_pong_db.json

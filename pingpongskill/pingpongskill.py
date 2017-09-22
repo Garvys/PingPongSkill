@@ -3,6 +3,7 @@
 
 import re
 import json
+import os
 import datetime
 from text2num import text2num
 from collections import defaultdict
@@ -21,6 +22,7 @@ class PingPongSkill(object):
         perfs = db.compute_perfs()
         if len(perfs) == 0:
             print "No match registred"
+            return
         loser = sorted(perfs.iteritems(), key=lambda x: x[1])[0][0]
         print "The one who lost the most matches is {}".format(loser)
 
@@ -29,6 +31,7 @@ class PingPongSkill(object):
         perfs = db.compute_perfs()
         if len(perfs) == 0:
             print "No match registred"
+            return
         loser = sorted(perfs.iteritems(), key=lambda x: -x[1])[0][0]
         print "The one who lost the most matches is {}".format(loser)
 
@@ -64,12 +67,15 @@ def parse_core(score):
 
 
 class JsonDB(object):
-    path = '/home/pi/ping_pong_db.json'
+    path = 'ping_pong_db.json'
 
     def __init__(self):
-        with open(self.path, 'r') as f:
-            results = json.load(f)
-        self._results = results
+        if not os.path.exists(self.path):
+            self._results = []
+        else:
+            with open(self.path, 'r') as f:
+                results = json.load(f)
+            self._results = results
 
     def add(self, player_1, player_2, score_player_1, score_player_2,
             datetime_str):
@@ -102,3 +108,8 @@ if __name__ == '__main__':
     ]
     for score in scores:
         print parse_core(score)
+
+    PingPongSkill().handle_loser()
+    PingPongSkill().handle_terminate_game('thib', 'alex', 'eleven to two')
+    PingPongSkill().handle_loser()
+
