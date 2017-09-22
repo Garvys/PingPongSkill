@@ -7,13 +7,10 @@ setup(
     url='https://github.com/Garvys/PingPongSkill',
     download_url='',
     license='MIT',
-    install_requires=['requests==2.6.0'],
+    install_requires=['requests==2.6.0', 'peewee'],
     test_suite="tests",
     keywords=['snips'],
     packages=['ping_pong_skill'],
     package_data={'myskill': ['Snipsspec']},
-    install_requires=[
-        'peewee',
-    ],
     include_package_data=True,
 )
