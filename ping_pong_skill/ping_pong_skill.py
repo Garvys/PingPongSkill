@@ -2,6 +2,7 @@
 """ Skeleton Snips skill. """
 
 from peewee import *
+import datetime
 
 db = SqliteDatabase('people.db')
 
