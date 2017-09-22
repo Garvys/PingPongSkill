@@ -11,6 +11,9 @@ class PingPongSkill:
         """
 	pass
 
+    def hello_world(self):
+	print("COUCOU")
+
     def turn_on(self):
         """ Turn on something. """
         print("Turn on")

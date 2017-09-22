@@ -1,15 +1,9 @@
-package_name: myskill
-class_name: MySkill
+package_name: ping_pong_skill
+class_name: PingPongSkill
 description: My fantastic Hack Day skill
-parameters: ["hostname", "light_ids"]
+parameters:
 intents:
-  - intent: DeactivateObject
-    action: "turn_off"
-  - intent: ActivateLightColor
-    action: >
-      {%
-      if intent.objectColor != None:
-        skill.set_color_name(intent.objectColor)
-      else:
-        skill.turn_on()
-      %}
+  - intent: Winner
+    action: "hello_world"
+  - intent: Loser
+    action: "hello_world"
