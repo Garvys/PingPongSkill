@@ -21,8 +21,11 @@ class PingPongSkill:
     def __init__(self):
 	pass
 
+    def hello_word(self):
+        print "Coucou"
+
     def register_game(self, winner, loser, score):
-        new_game = Game.create(winner, loser, score, date=
+        new_game = Game.create(winner, loser, score)
 
 
     def turn_on(self):
