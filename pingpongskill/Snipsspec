@@ -10,6 +10,10 @@ intents:
   - intent: QureryScore
     action: "handle_terminate_game"
   - intent: TerminateGame
-    action: "handle_terminate_game"
+    action: >
+      {%
+        skill.handle_terminate_game(intent)
+      %}
+
 
 
