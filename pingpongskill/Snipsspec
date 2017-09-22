@@ -4,11 +4,20 @@ description: My fantastic Hack Day skill
 parameters:
 intents:
   - intent: Winner
-    action: "handle_terminate_game"
+    action: >
+      {%
+        skill.handle_terminate_game(intent)
+      %}
   - intent: Loser
-    action: "handle_terminate_game"
+    action: >
+      {%
+        skill.handle_terminate_game(intent)
+      %}
   - intent: QureryScore
-    action: "handle_terminate_game"
+    action: >
+      {%
+        skill.handle_terminate_game(intent)
+      %}
   - intent: TerminateGame
     action: >
       {%

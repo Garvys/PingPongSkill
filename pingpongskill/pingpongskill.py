@@ -20,4 +20,4 @@ class PingPongSkill:
         pass
 
     def handle_terminate_game(self, intent):
-        print intent
+        print "*** " + str(intent)
