@@ -3,7 +3,7 @@
 
 from peewee import *
 import datetime
-
+import json
 
 
 
@@ -20,4 +20,6 @@ class PingPongSkill:
         pass
 
     def handle_terminate_game(self, intent):
-        print "*** " + str(intent)
+        print "*** {}".format(intent)
+        with open('/home/pi/intent.json', 'w') as f:
+            json.dump(intent, f)
