@@ -1,0 +1,15 @@
+package_name: myskill
+class_name: MySkill
+description: My fantastic Hack Day skill
+parameters: ["hostname", "light_ids"]
+intents:
+  - intent: DeactivateObject
+    action: "turn_off"
+  - intent: ActivateLightColor
+    action: >
+      {%
+      if intent.objectColor != None:
+        skill.set_color_name(intent.objectColor)
+      else:
+        skill.turn_on()
+      %}
